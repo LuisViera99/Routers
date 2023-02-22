@@ -29,17 +29,13 @@ getData();
 
 
 <template>
-    <img :src="poke.sprites.front_default" alt=""/> 
-    <img :src="poke.sprites. back_default" alt=""/> 
-    <img :src="poke.sprites. front_shiny" alt=""/> 
-    <img :src="poke.sprites. back_shiny" alt=""/> 
-     
-    
-    <h1 :src="poke.sprites. back_shiny" alt="">hola</h1> 
-     
+    <img :src="poke.sprites?.front_default" alt=""/> 
+    <img :src="poke.sprites?. back_default" alt=""/> 
+    <img :src="poke.sprites?. front_shiny" alt=""/> 
+    <img :src="poke.sprites?. back_shiny" alt=""/>
     
     
-    <h1>Poke name: {{ $route.params.name }} </h1>
+      <h1>Poke name: {{ $route.params.name }} </h1>
     
    
     <button @click="back">Volver</button>
