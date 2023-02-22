@@ -22,6 +22,7 @@ const getData = async() => {
 
     } catch (error){
         console.log(error);
+        poke.value = null;
     }
 };
 getData();
@@ -29,6 +30,9 @@ getData();
 
 
 <template>
+    <div v-if = "poke">
+
+ 
     <img :src="poke.sprites?.front_default" alt=""/> 
     <img :src="poke.sprites?. back_default" alt=""/> 
     <img :src="poke.sprites?. front_shiny" alt=""/> 
@@ -36,7 +40,7 @@ getData();
     
     
       <h1>Poke name: {{ $route.params.name }} </h1>
-    
-   
-    <button @click="back">Volver</button>
+    </div>
+   <h1 v-else>No existe el Pokemon</h1>
+    <button @click="back" class="btn btn-outline-primary">Volver</button>
 </template>
