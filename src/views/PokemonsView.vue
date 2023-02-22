@@ -1,8 +1,6 @@
 <script setup>
-import axios from 'axios'
-
-import {ref} from 'vue'
-
+import axios from 'axios';
+import {ref} from 'vue';
 import { RouterLink } from 'vue-router';
 
 const pokemons = ref([])
